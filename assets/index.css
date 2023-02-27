@@ -11,9 +11,7 @@ section{
     min-height: 100vh;
     width: 100%;
     
-    background: url('gradient.png')no-repeat;
-    background-position: center;
-    background-size: cover;
+    background: linear-gradient(180deg, rgba(33,105,117,1) 26%, rgba(0,0,0,1) 100%);
 }
 .form-box{
     position: relative;
@@ -23,7 +21,7 @@ section{
     border: 2px solid rgba(255,255,255,0.5);
     border-radius: 20px;
     backdrop-filter: blur(15px);
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
 
@@ -70,25 +68,6 @@ top: -5px;
     font-size: 1.2em;
     top: 20px;
 }
-.forget{
-    margin: -15px 0 15px ;
-    font-size: .9em;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;  
-}
-
-.forget label input{
-    margin-right: 3px;
-    
-}
-.forget label a{
-    color: #fff;
-    text-decoration: none;
-}
-.forget label a:hover{
-    text-decoration: underline;
-}
 button{
     width: 100%;
     height: 40px;
@@ -121,4 +100,40 @@ button{
     background: none;
     padding-top: 20px;
     color: gray;
+    float: right;
+}
+.sbmBtn{
+    margin-top: 20px;
+}
+table{
+    border: 5px;
+    padding: 20px;
+    border-spacing: 10px;
+}
+.ths{
+    padding: 10px;
+    position: relative;
+    border-bottom:2px solid rgba(255,255,255,0.5);
+    cursor: default;
+}
+.foc{
+    border-bottom:2px solid #aadb16;
+    background-color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition-duration: 20ms;
+}
+.err{
+    display: none;
+    color: red;
+    size: .5pt;
+}
+.btd{
+    text-align: center;
+    padding-top: 15px;
+}
+label{
+    font-size: 1em;
+    color: #fff;
+    text-align: center;
 }
