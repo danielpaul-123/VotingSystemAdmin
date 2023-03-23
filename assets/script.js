@@ -44,6 +44,11 @@ function highligter(){
   }
   
   headers[currentHeader].classList.add('foc');
+  /* var x  = document.getElementsById('jaba');
+  var d = x.innerHTML;
+  console.log(x);
+  console.log(d);
+  this.window.alert("hi") */
   currentHeader++;
   document.getElementById("unm").value = "";
   document.getElementById("pass").value = "";
