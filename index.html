@@ -1,52 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="assets/index.css">
-  <title>OnlineVotingSystem</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
+  <head>
+    <link rel="stylesheet" href="assets/index.css" />
+    <link
+      rel="favorate icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
+    <title>OnlineVotingSystem</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
     <section>
-        <table>
-            <thead>
-                <tr>
-                    <th class="ths" >Abhishek</th>
-                    <th class="ths" >Anupama</th>
-                    <th class="ths" >Asna</th>
-                    <th class="ths" >Brahmadev</th>
-                    <th class="ths" >Christy</th>
-                    <th class="ths" >Daniel</th>
-                    <th class="ths" >Dibin</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td colspan="7"  class="btd" >
-                        <div class="form-box">
-                            <div class="form-value">
-                                <form id="form" method="post" onsubmit="return false;" >
-                                    <h2>Login</h2>
-                                    <div class="inputbox">
-                                        <ion-icon name="uname-outline"></ion-icon>
-                                        <input type="text" id="unm" required>
-                                        <label for="">Username</label>
-                                    </div>
-                                    <div class="inputbox">
-                                        <ion-icon name="lock-closed-outline"></ion-icon>
-                                        <input type="password" id="pass" required>
-                                        <label for="">Password</label>
-                                    </div>
-                                    <p id="err" class="err">Something went wrong...</p>
-                                    <button id="submit" class="sbmBtn">Log in</button>
-                                </form>
-                                <button class="skpBtn" id="skp" >Skip</button>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+      <table>
+        <thead>
+          <tr>
+            <th class="ths">Abhishek</th>
+            <th class="ths">Anupama</th>
+            <th class="ths">Asna</th>
+            <th class="ths">Brahmadev</th>
+            <th class="ths">Christy</th>
+            <th class="ths">Daniel</th>
+            <th class="ths">Dibin</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="7" class="btd">
+              <div class="form-box">
+                <div class="form-value">
+                  <form id="form" method="post" onsubmit="return false;">
+                    <h2>Login</h2>
+                    <div class="inputbox">
+                      <input type="text" id="unm" required />
+                      <label for="">Username</label>
+                    </div>
+                    <div class="inputbox">
+                      <ion-icon name="lock-closed-outline"></ion-icon>
+                      <input type="password" id="pass" required />
+                      <label for="">Password</label>
+                    </div>
+                    <p id="err" class="err">Something went wrong...</p>
+                    <button id="submit" class="sbmBtn">Log in</button>
+                  </form>
+                  <button class="skpBtn" id="skp">Skip</button>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </section>
     <script src="./assets/script.js"></script>
-</body>
+  </body>
 </html>
