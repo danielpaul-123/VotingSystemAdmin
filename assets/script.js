@@ -21,7 +21,7 @@ submiter.addEventListener("click",function(event){
   //for test purposes checks pass and uname were hello or not ,later replace with proper firebasecode
   var name = document.getElementById("unm").value;
   var pass = document.getElementById("pass").value;
-  if(name != "hello" && pass != "hello")
+  if(name != "hello" || pass != "hello")
   err.style.display = "block";//if login is unsuccesfull throws a error message
   
   //else clears the form and highlights next admins name
