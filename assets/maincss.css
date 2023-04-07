@@ -1,20 +1,22 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Passion+One:400");
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body {
-  background-color: #202024;
+  background: #182336;
   z-index: 1;
 }
 header {
-  background-color: #42424f;
+  background: rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  border-radius: 15px;
 }
 h1 {
   color: #fff;
   font-weight: 400;
   line-height: 1.5;
-  font-family: "Passion One", cursive;
+  font-family: 'Roboto', sans-serif;
 }
 *,
 *:before,
@@ -107,13 +109,15 @@ button,
 .button {
   appearance: none;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  background-color: #70c7be;
+  background-color: #182336;
   border-radius: 4px;
   border: 0;
   color: #ffffff !important;
   cursor: pointer;
   display: inline-block;
   font-weight: 400;
+  font-size: 20px;
+  font-family: 'Abeezee', sans-serif;
   height: 2.85em;
   line-height: 2.95em;
   padding: 0 1.5em;
@@ -185,11 +189,7 @@ button:disabled,
 }
 
 label {
-  color: #fff;
   display: block;
-  font-size: 0.9em;
-  font-weight: 400;
-  margin: 0 0 1em 0;
 }
 
 input[type="text"] {
@@ -259,6 +259,7 @@ input[type="text"]:focus {
 
 .inputbox label {
   position: absolute;
+  font-family: 'Abeezee', sans-serif;
   top: 50%;
   left: 5px;
   transform: translateY(-50%);
@@ -287,4 +288,52 @@ input:valid ~ label {
 .crca {
   display: flex;
   justify-content: space-between;
+}
+table {
+  border: 5px;
+  padding: 20px;
+  border-spacing: 10px;
+}
+
+.btd {
+  text-align: center;
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.inputbx {
+  position: relative;
+  width: 310px;
+  border-bottom: 2px solid #fff;
+}
+
+.inputbx input {
+  width: 100%;
+  height: 30px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  padding: 0 0 0 5px;
+  color: #fff;
+}
+
+.inputbx label {
+  text-align: left;
+  font-family: 'Abeezee', sans-serif;
+  color: #fff;
+  font-size: 1em;
+  pointer-events: none;
+  margin-bottom: 6px;
+  padding-left: 5px;
+}
+
+.btda {
+  text-align: center;
+  padding-left: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 10px;
 }

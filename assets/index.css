@@ -10,7 +10,7 @@ section {
   min-height: 100vh;
   width: 100%;
 
-  background: #202024;
+  background-image: linear-gradient(0deg,#000000,#223353);
 }
 .form-box {
   position: relative;
@@ -90,7 +90,7 @@ button {
   position: relative;
   background: none;
   padding-top: 20px;
-  color: gray;
+  color: rgb(167, 167, 167);
   float: right;
 }
 .sbmBtn {
@@ -109,9 +109,9 @@ table {
   color: #fff;
 }
 .foc {
-  border-bottom: 2px solid #aadb16;
-  background-color: #fff;
-  color: #202024;
+  border-bottom: 4px solid #11ff00;
+  background-color: #fdfdfd;
+  color: #223353;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   transition-duration: 20ms;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>OnlineVotingSystem</title>
+    <title>Issue New Voter's ID</title>
     <link rel="stylesheet" href="../assets/maincss.css" />
     <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,47 +9,58 @@
   <body>
     <header>
       <div>
-        <h1>Admin login</h1>
+        <h1>New Voter's ID</h1>
       </div>
       <div class="navbuttons">
         <button class="beck" id="beck">Logout</button>
-        <button class="addvote" id="addvote">+</button>
       </div>
     </header>
     <div id="main">
-      <div class="inner">
-        <div class="thumbnails" id="thumb">
-          <!-- <div class="box">
-            <div class="inner">
-              <h2>Panchayath Election</h2>
-              <a class="button fit">View</a>
-            </div>
-          </div> -->
-        </div>
-      </div>
-      <div class="bgform"></div>
-      <div class="form-box">
-        <div class="form-value">
-          <form
-            id="form"
-            method="post"
-            onsubmit="return false;"
-            autocomplete="off"
-          >
-            <h2>New Election</h2>
-            <div class="inputbox">
-              <ion-icon name="uname-outline"></ion-icon>
-              <input type="text" id="eleccat" required />
-              <label for="">Election Catogery</label>
-            </div>
-            <div class="crca">
-              <button id="create">Create</button>
-              <button id="cancel" onclick="canceller(event)">Cancel</button>
-            </div>
-          </form>
-        </div>
-      </div>
+      <table align="center">
+        <tbody>
+        <form id="form" method="post" onsubmit="return false;" enctype="multipart/form-data"></form>
+          <tr>
+            <td class="btd">        
+              <div class="inputbox">
+                <input type="number" id="vid" required="required" />
+                <label for="">Voter's ID</label>
+              </div>
+            </td>
+            <td  class="btd">
+              <div class="inputbox">
+                <input type="text" id="unm" required="required" />
+                <label for="">Username</label>
+              </div>
+            </td>  
+          </tr>
+          <tr>
+            <td class="btd">        
+              <div class="inputbox">
+                <input type="password" id="pwd" required="required" />
+                <label for="">Password</label>
+              </div>
+            </td>
+            <td  class="btda">
+              <div class="inputbx">
+                <label for="">Select Profile Image</label>
+                <input type="file" value="Upload Photo" id="pimg" accept="image/jpeg" accept="image/png" required />
+              </div>
+            </td>  
+          </tr>
+          <tr>
+            <td colspan="2" align="center">
+              <button id="submit" class="sbmBtn">Submit</button>
+            </td>
+          </tr>
+        </form>
+        </tbody>
+      </table>
     </div>
+    <script src="../node_modules/argon2-browser/dist/argon2-bundled.min.js"></script>
+    <script src="../node_modules/random-string-generator/dist/random.umd.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
     <script src="../assets/mainscript.js"></script>
   </body>
 </html>
