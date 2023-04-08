@@ -119,7 +119,7 @@ function electionupdate (_voterid)
 
 function imageupload(_voterid)
 {
-  let voterid = _voterid+".jpg";
+  let voterid = _voterid;
   const profile = document.getElementById("pimg").files[0];
   const storageRef = firebase.storage().ref().child('user_profile/'+voterid);
   storageRef.put(profile).then((snapshot) => {
