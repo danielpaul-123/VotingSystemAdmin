@@ -16,6 +16,7 @@ const skipp = document.getElementById('skp');
 const headers = document.querySelectorAll('th');
 const err = document.getElementById('err');
 const submiter = document.getElementById('submit');
+const progress = document.querySelector('progress-bar');
 
 let currentHeader = 0;
 
@@ -29,12 +30,13 @@ skipp.onclick = function()
   {
     id++;
     skipp.style.display='none';
+    console.log("Skipped");
   }
   else
   {
     id++;
+    console.log("Skipped");
   }
-  err.style.display = "none";
   highligter();
   form.reset();
 };
@@ -42,18 +44,7 @@ skipp.onclick = function()
 //formSumbitHandler
 submiter.addEventListener("click",async function(event){
   event.preventDefault();
-
-  //Read from firebase code, compare keyword with argon2id hash to login
-  // argon2.hash({
-  //   pass:"dibin",
-  //   salt:random(16),
-  //   time:2,
-  //   mem:16384,
-  //   hashLen:32,
-  //   parallelism:1,
-  //   type:argon2.ArgonType.Argon2id,
-  //   }).then(h => console.log("Username: ",h.encoded))
-  //   .catch(e => console.error(e.message, e.code));
+  document.getElementById("progress").style.display = "block";
           
     let adminid = "Admin"+id;
     const firestore = firebase.firestore();
@@ -73,19 +64,30 @@ submiter.addEventListener("click",async function(event){
           .then(() => {
 
             id++;
+            
+            document.getElementById("progress").style.display = "none";
             highligter();
+            console.log("Success");
 
-          }).catch(e => err.style.display = "block");
+          }).catch(e => {
+            err.style.display = "block";
+            document.getElementById("progress").style.display = "none";
+          });
 
-        }).catch(e => err.style.display = "block");
+        }).catch(e => {
+          err.style.display = "block";
+          document.getElementById("progress").style.display = "none";
+        });
       }
       else
       {
         console.log("No Document!");
+        document.getElementById("progress").style.display = "none";
       }
     }).catch((error) => {
       console.log("Error!");
       console.log(error);
+      document.getElementById("progress").style.display = "none";
     });
         
 })
@@ -106,4 +108,25 @@ function highligter(){
   currentHeader++;
   document.getElementById("unm").value = "";
   document.getElementById("pwd").value = "";
+}
+
+function setname()
+{
+  var id = 1
+  let thid = "admin"+id;
+  const firestore = firebase.firestore();
+  var collectionref = firestore.collection("Admin_User");
+
+  collectionref.get().then((querySnapshot) => {
+    // Loop through the documents
+    querySnapshot.forEach((doc) => {
+      // doc.data() is the document contents
+      let thid = "admin"+id;
+      const name = doc.data().Name;
+      var thElement = document.getElementById(thid);
+      thElement.innerHTML = name;
+      id++;
+    });
+  });
+  console.log("Success!");
 }

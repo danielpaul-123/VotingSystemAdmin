@@ -1,31 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body {
-  /* background: #182336; */
-  background: radial-gradient(#223353, #000000);
-  /* background-repeat: no-repeat; */
-  /*height: 100% !important;
-  background-size: cover !important; */
+  position: relative;
   z-index: 1;
+  background-color: #142034;
+  background-repeat: no-repeat;
+  min-height: 100%;
+  min-width: 100%;
 }
 header {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.092);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   border-radius: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
 }
 h1 {
   color: #fff;
   font-weight: 400;
   line-height: 1.5;
   font-family: 'Roboto', sans-serif;
-}
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
 }
 
 #main {
@@ -47,38 +45,6 @@ h1 {
   #main .inner {
     width: 95%;
   }
-}
-
-.box {
-  border-radius: 4px;
-  margin-bottom: 2em;
-  background: #2c2c32;
-  text-align: center;
-}
-
-.box .image.fit {
-  margin: 0;
-}
-
-.box .image img {
-  border-radius: 4px 4px 0 0;
-}
-
-.box .inner {
-  padding: 1.5em;
-  width: 100% !important;
-}
-
-@media screen and (max-width: 480px) {
-  .box .inner {
-    padding: 1em;
-  }
-}
-
-.box.alt {
-  border: 0;
-  border-radius: 0;
-  padding: 0;
 }
 
 button,
@@ -106,7 +72,7 @@ button,
 
 button:hover,
 .button:hover {
-  background-color: #82cec6;
+  background-color: #6aa7a1;
 }
 
 button:active,
@@ -314,16 +280,10 @@ table {
   padding-right: 10px;
 }
 
-
-.appname{
-  color: #ffffffcd;
-  font-family: 'Abeezee', sans-serif;
-  font-weight: lighter;
-  font-size: 5ex;
-}
-
 h4{
-  color: #ffffffcd;
+  color: #ffffffaf;
   font-family: 'Abeezee', sans-serif;
   font-weight: lighter;
+  font-size: 2ex;
+  padding-top: 20px;
 }
