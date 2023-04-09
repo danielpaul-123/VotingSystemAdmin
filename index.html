@@ -2,26 +2,22 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="assets/index.css" />
-    <link
-      rel="favorate icon"
-      href="assets/images/favicon.png"
-      type="image/x-icon"
-    />
+    <link rel="favorate icon" href="assets/images/favicon.png" type="image/x-icon"/>
     <title>Online Voting System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body>
+  <body onload="setname()">
     <section>
       <table>
         <thead>
           <tr>
-            <th class="ths">Abhishek</th>
-            <th class="ths">Anupama</th>
-            <th class="ths">Asna</th>
-            <th class="ths">Brahmadev</th>
-            <th class="ths">Christy</th>
-            <th class="ths">Daniel</th>
-            <th class="ths">Dibin</th>
+            <th class="ths" id="admin1">Abhishek</th>
+            <th class="ths" id="admin2">Anupama</th>
+            <th class="ths" id="admin3">Asna</th>
+            <th class="ths" id="admin4">Brahmadev</th>
+            <th class="ths" id="admin5">Christy</th>
+            <th class="ths" id="admin6">Daniel Paul Perinchery </th>
+            <th class="ths" id="admin7">Dibin</th>
           </tr>
         </thead>
         <tbody>
@@ -29,19 +25,18 @@
             <td colspan="7" class="btd">
               <div class="form-box">
                 <div class="form-value">
-                  <form id="form" method="post" onsubmit="return false;">
+                  <form id="form" method="post" autocomplete="off">
                     <h2>Login</h2>
                     <div class="inputbox">
                       <input type="text" id="unm" required />
                       <label for="">Username</label>
                     </div>
                     <div class="inputbox">
-                      <ion-icon name="lock-closed-outline"></ion-icon>
                       <input type="password" id="pwd" required />
                       <label for="">Password</label>
                     </div>
                     <p id="err" class="err">Incorrect Username or Password.</p>
-                    <button id="submit" class="sbmBtn">Log in</button>
+                    <button id="submit" class="sbmBtn" type="submit">Log in</button>
                   </form>
                   <button class="skpBtn" id="skp">Skip</button>
                 </div>

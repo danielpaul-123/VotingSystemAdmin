@@ -17,8 +17,7 @@
     </header>
     <div id="main">
       <table align="center">
-        <tbody>
-        <form id="form" method="post" onsubmit="return false;" enctype="multipart/form-data"></form>
+        <form id="form" method="post" onsubmit="return false;" enctype="multipart/form-data" autocomplete="off">
           <tr>
             <td class="btd">        
               <div class="inputbox">
@@ -53,9 +52,14 @@
             </td>
           </tr>
         </form>
-        </tbody>
       </table>
     </div>
+    <!-- <footer>
+      <center>
+        <h4 id="appname" style="font-size: 2.8ex;">Online Voting System</h4>
+        <h4 style="font-size: 2.5ex;">Department of Computer Engineering, MTI Thrissur</h4>
+      </center>
+    </footer> -->
     <script src="../node_modules/argon2-browser/dist/argon2-bundled.min.js"></script>
     <script src="../node_modules/random-string-generator/dist/random.umd.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>

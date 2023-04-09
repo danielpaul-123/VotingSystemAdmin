@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body {
-  background: #182336;
+  /* background: #182336; */
+  background: radial-gradient(#223353, #000000);
+  /* background-repeat: no-repeat; */
+  /*height: 100% !important;
+  background-size: cover !important; */
   z-index: 1;
 }
 header {
@@ -23,12 +27,7 @@ h1 {
 *:after {
   box-sizing: border-box;
 }
-.box {
-  border-radius: 4px;
-  margin-bottom: 2em;
-  background: #2c2c32;
-  text-align: center;
-}
+
 #main {
   padding: 4em 0 2em 0;
 }
@@ -47,29 +46,6 @@ h1 {
 @media screen and (max-width: 480px) {
   #main .inner {
     width: 95%;
-  }
-}
-.thumbnails {
-  display: flex;
-  align-items: stretch;
-  justify-content: start;
-  flex-wrap: wrap;
-}
-
-.thumbnails .box {
-  margin: 0 1em 2em 1em;
-  width: 30%;
-}
-
-@media screen and (max-width: 1280px) {
-  .thumbnails .box {
-    width: 45%;
-  }
-}
-
-@media screen and (max-width: 736px) {
-  .thumbnails .box {
-    width: 100%;
   }
 }
 
@@ -109,8 +85,8 @@ button,
 .button {
   appearance: none;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  background-color: #182336;
-  border-radius: 4px;
+  background-color: #233452;
+  border-radius: 8px;
   border: 0;
   color: #ffffff !important;
   cursor: pointer;
@@ -336,4 +312,18 @@ table {
   padding-top: 0px;
   padding-bottom: 0px;
   padding-right: 10px;
+}
+
+
+.appname{
+  color: #ffffffcd;
+  font-family: 'Abeezee', sans-serif;
+  font-weight: lighter;
+  font-size: 5ex;
+}
+
+h4{
+  color: #ffffffcd;
+  font-family: 'Abeezee', sans-serif;
+  font-weight: lighter;
 }
