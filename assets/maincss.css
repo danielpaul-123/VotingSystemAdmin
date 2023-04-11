@@ -5,6 +5,7 @@ body {
   z-index: 1;
   background-color: #142034;
   background-repeat: no-repeat;
+
 }
 header {
   background: rgba(255, 255, 255, 0.092);
@@ -237,10 +238,8 @@ table {
 
 .btd {
   text-align: center;
-  padding-top: 15px;
   padding-left: 10px;
   padding-right: 10px;
-  padding-bottom: 10px;
 }
 
 .inputbx {
@@ -256,7 +255,7 @@ table {
   border: none;
   outline: none;
   font-size: 1em;
-  padding: 0 0 0 5px;
+  padding: 0 0 0 0;
   color: #fff;
 }
 

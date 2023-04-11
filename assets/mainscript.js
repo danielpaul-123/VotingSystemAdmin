@@ -68,7 +68,14 @@ function argonpass(_hashuname)
 
 function firestoreupload(_hashuname,_hashpass)
 {
-  var vid = document.getElementById("vid").value;
+  // generate a random number between 10000000 and 99999999
+  const randomNumber = Math.floor(Math.random() * 90000000) + 10000000;
+  // convert the number to a string
+  const randomString = randomNumber.toString();
+
+  // check if the string is exactly 8 characters long
+  const vid = randomString.padEnd(8, '0');
+
   const hashuname = _hashuname;
   const hashpass = _hashpass;
   const firestore = firebase.firestore();

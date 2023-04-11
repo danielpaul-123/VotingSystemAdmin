@@ -45,6 +45,8 @@ skipp.onclick = function()
 submiter.addEventListener("click",async function(event){
   event.preventDefault();
   document.getElementById("progress").style.display = "block";
+
+  
           
     let adminid = "Admin"+id;
     const firestore = firebase.firestore();
@@ -113,7 +115,7 @@ function highligter(){
 function setname()
 {
   var id = 1
-  let thid = "admin"+id;
+  
   const firestore = firebase.firestore();
   var collectionref = firestore.collection("Admin_User");
 
