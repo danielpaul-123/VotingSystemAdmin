@@ -1,6 +1,7 @@
 const bk = document.getElementById('beck');
 const submiter = document.getElementById('submit');
 const form = document.querySelector("form");
+const progress = document.querySelector('progress-bar');
 
 const firebaseConfig = {
   apiKey: "AIzaSyCjkXPnUijS3uYWvuPheSjJeFvoiZ7nrQ0",
@@ -21,6 +22,7 @@ bk.addEventListener("click",function(event){
 
 submiter.addEventListener("click",async function(event){
   event.preventDefault();
+  document.getElementById("progress").style.display = "block";
 
   //Read from firebase code, compare keyword with argon2id hash to login
   // argon2.hash({
@@ -46,7 +48,9 @@ submiter.addEventListener("click",async function(event){
     type:argon2.ArgonType.Argon2id,
     }).then(h => {const hashuname = h.encoded;
       argonpass(hashuname);
-      }).catch(e => console.error(e.message, e.code));
+      }).catch(e => {
+        console.error(e.message, e.code);
+        document.getElementById("progress").style.display = "none";});
 })
 
 function argonpass(_hashuname)
@@ -63,19 +67,22 @@ function argonpass(_hashuname)
     type:argon2.ArgonType.Argon2id,
     }).then(h => {const hashpass = h.encoded;
     firestoreupload(hashuname,hashpass);
-    }).catch(e => console.error(e.message, e.code));
+    }).catch(e => {
+      console.error(e.message, e.code);
+      document.getElementById("progress").style.display = "none";});
 }
 
 function firestoreupload(_hashuname,_hashpass)
 {
   // generate a random number between 10000000 and 99999999
-  const randomNumber = Math.floor(Math.random() * 90000000) + 10000000;
+  // const randomNumber = Math.floor(Math.random() * 90000000) + 10000000;
   // convert the number to a string
-  const randomString = randomNumber.toString();
+  // const randomString = randomNumber.toString();
 
   // check if the string is exactly 8 characters long
-  const vid = randomString.padEnd(8, '0');
+  // const vid = randomString.padEnd(8, '0');
 
+  var vid = document.getElementById("vid").value;
   const hashuname = _hashuname;
   const hashpass = _hashpass;
   const firestore = firebase.firestore();
@@ -94,6 +101,7 @@ collectionref.set(data)
 })
 .catch((error) => {
   console.error("Error adding document: ", error);
+  document.getElementById("progress").style.display = "none";
 });
 }
 
@@ -119,6 +127,7 @@ function electionupdate (_voterid)
       })
       .catch((error) => {
         console.error("Error adding document: ", error);
+        document.getElementById("progress").style.display = "none";
       });
     });
   });
@@ -133,3 +142,5 @@ function imageupload(_voterid)
     console.log('Succesfull!');
   })
 }
+
+
